@@ -1,6 +1,8 @@
 import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navigation from './Navigation';
 import MainSection from './MainSection';
+import BookDetail from './BookDetail';
 import { getInitialData } from '../data';
 
 class BookshelfApp extends React.Component {
@@ -79,8 +81,8 @@ class BookshelfApp extends React.Component {
     render() {
         return (
             <div>
-                <Navigation />
-                <MainSection titleSection={"Masukan Buku Baru"} books={this.state.books} addBook={this.onAddBookHandler} moveBook={this.onMoveBookHandler} deleteBook={this.onDeleteBookHandler}/>
+                    <Navigation />
+                    <MainSection titleSection={"Masukan Buku Baru"} books={this.state.books} addBook={this.onAddBookHandler} moveBook={this.onMoveBookHandler} deleteBook={this.onDeleteBookHandler}/>
             </div>
         );
     }
